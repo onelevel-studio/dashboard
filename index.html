@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Complet</title>
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Horloge, date et météo en haut à gauche -->
+<div class="top-left-widget">
+    <div id="clock"></div>
+    <div class="weather-box" id="weather">Chargement...</div>
+</div>
+
+<!-- Todo List en haut à droite -->
+<div class="todo-widget">
+    <div class="todo-header" onclick="toggleTodoList()">
+        <h2>📝 Todo List</h2>
+        <button class="todo-toggle-btn" id="toggleBtn">▼</button>
+    </div>
+    <div id="todoContent">
+        <div class="todo-input">
+            <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
+            <button onclick="addTask()">Ajouter</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+</div>
+
+<!-- Mini traitement de texte -->
+<div class="dashboard">
+    <h2>📝 Mini traitement de texte</h2>
+    <textarea id="textEditor" placeholder="Écris ici ton texte..."></textarea>
+    <button id="saveText" onclick="saveAsTxt()">💾 Enregistrer en .txt</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
